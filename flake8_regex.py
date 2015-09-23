@@ -1,4 +1,4 @@
-__version__ = '0.2'
+__version__ = '0.3'
 
 import importlib
 import os
@@ -8,7 +8,7 @@ import pep8
 sys.path.append(os.getcwd())
 CONFIG_MODULE = os.environ.get("FLAKE8_REGEX_CONFIG_MODULE")
 
-PATTERNS_CONFIG = (getattr(importlib.import_module(CONFIG_MODULE), 'flake8_regex_config')
+PATTERNS_CONFIG = (getattr(importlib.import_module(CONFIG_MODULE), 'rules')
                    if CONFIG_MODULE else None)
 
 
